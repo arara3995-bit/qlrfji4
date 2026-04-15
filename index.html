@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>НЕ ЗАКРЫВАЙ ЭТО</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="logo-wrap">
+      <span class="logo-dot"></span>
+      <span class="logo-text">IRRITATION.EXE</span>
+    </div>
+    <div class="panic-badge">режим: максимальный дискомфорт</div>
+  </header>
+
+  <main class="layout">
+    <section class="hero panel">
+      <p class="eyebrow">100% раздражения · 0% покоя</p>
+      <h1>Самый<br>надоедливый сайт</h1>
+      <p class="lead">
+        Он мигает, орет цветами, мешает нажать кнопку и постоянно считает,
+        насколько сильно вы пожалели о том, что его открыли.
+      </p>
+
+      <div class="controls">
+        <button id="worseBtn" class="action primary">Сделать еще хуже</button>
+        <button id="escapeBtn" class="action secondary">Нет, спасибо</button>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-label">Уровень хаоса</span>
+          <strong id="chaosValue">01</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Всплывашки</span>
+          <strong id="popupValue">00</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Жалобы мозга</span>
+          <strong id="painValue">12</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="right-column">
+      <article class="panel warning-panel">
+        <div class="warning-title">Срочное уведомление</div>
+        <p>
+          Этот сайт специально ведет себя плохо: дрожит, переливается, сыпет
+          баннерами и отказывается быть вежливым.
+        </p>
+        <div class="meter">
+          <span class="meter-fill"></span>
+        </div>
+      </article>
+
+      <article class="panel spiral-panel">
+        <div class="spiral"></div>
+        <p class="spiral-caption">Смотрите на спираль и сожалейте.</p>
+      </article>
+    </section>
+  </main>
+
+  <section class="ticker-shell">
+    <div class="ticker">
+      <span>ВНИМАНИЕ</span>
+      <span>НЕЛЬЗЯ НАЖАТЬ СПОКОЙНО</span>
+      <span>КНОПКА УБЕЖАЛА</span>
+      <span>ЕЩЕ ОДНА ПЛАШКА</span>
+      <span>ВИЗУАЛЬНЫЙ ШУМ</span>
+      <span>СДЕЛАТЬ ХУЖЕ</span>
+      <span>ПОЧЕМУ ОНО ДЕРГАЕТСЯ</span>
+      <span>ЭТО И БЫЛО ЗАДУМАНО</span>
+    </div>
+  </section>
+
+  <section id="popupDeck" class="popup-deck" aria-live="polite"></section>
+  <section id="toastStack" class="toast-stack" aria-live="polite"></section>
+  <section id="emojiField" class="emoji-field" aria-hidden="true"></section>
+
+  <template id="popupTemplate">
+    <article class="popup">
+      <div class="popup-head">
+        <span class="popup-title">Критически важная ерунда</span>
+        <button class="popup-close" type="button" aria-label="Закрыть">×</button>
+      </div>
+      <div class="popup-body">
+        <p class="popup-text"></p>
+        <div class="popup-progress">
+          <span class="popup-progress-bar"></span>
+        </div>
+        <button class="popup-cta" type="button">О нет</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
